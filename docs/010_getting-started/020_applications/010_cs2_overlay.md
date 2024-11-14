@@ -1,69 +1,70 @@
 ---
-title: CS2 Ingame Overlay
+title: CS2 游戏内覆盖
 ---
 
-# Valthrun CS2 Overlay
+# Valthrun CS2 覆盖层
 
-## Features
+## 功能
 
-The Valthrun overlay is an in game overlay over the running Counter Strike 2 application including the following features:
+Valthrun 覆盖层是在运行中的 Counter Strike 2 应用程序上的游戏内覆盖，包含以下功能：
 
-- External radar  
-  Publish your game for everybody on https://radar.valth.run.  
-  More information can be found [here](./cs2_radar_standalone)
+- 外部雷达  
+  在 https://radar.valth.run 上发布你的游戏状态。  
+  更多信息请参见[此处](./cs2_radar_standalone)。
 
-- Player ESP  
-  ESP with a lot of configuration possibilities like: Skeleton, Boxes3D and Boxes2D
+- 玩家 ESP  
+  提供多种配置选项的 ESP，比如：骨架显示、3D 盒子和 2D 盒子
 
-  - Configurable colors to distinguish between enemy and team players
-  - ESP includes player health, a health bar, weapon and a lot more
+  - 可配置颜色来区分敌人和队友
+  - ESP 包含玩家血量、血条、武器等信息
 
-- Bomb Info
+- 炸弹信息
 
-  - Time until the bomb detonation
-  - Defuser info such as a defuse timer
-  - Bomb site where the bomb is located
+  - 炸弹爆炸的倒计时
+  - 拆弹信息，如拆弹计时器
+  - 炸弹所在的炸弹点位置
 
-- Trigger Bot  
-  Shoot your enemy (or team mates) as soon they enter your crosshair
+- 自动射击  
+  敌人（或队友）一进入准心即自动射击
 
-- Spectator info  
-  List of player currently watching you / the observer target
+- 观察者信息  
+  显示当前观战你的玩家列表 / 观察目标
 
-- Stream proof by default  
-  Never show your Valthrun overlay on any screen shares
+- 默认屏蔽直播  
+  Valthrun 覆盖层不会显示在任何屏幕分享中
 
-To access Valthruns settings overlay press `PAUSE`.
+要访问 Valthrun 的设置覆盖，按下 `PAUSE` 键。
 
-## Prerequiresits
+## 前置要求
 
-Before you can use the CS2 ingame overlay you have to optain the following prerequiresits:
+在使用 CS2 游戏内覆盖之前，您需要获取以下前置条件：
 
-1. Download the CS2 ingame overlay (controller.exe)
-   Download the latest CS2 ingame overlay from GitHub:
+1. 下载 CS2 游戏内覆盖（controller.exe）  
+   从 GitHub 下载最新的 CS2 游戏内覆盖：  
    https://github.com/Valthrun/Valthrun/releases/tag/latest
 
-2. Setup one of the Valthrun drivers  
-   How you can setup a Valthrun driver is described in detail in the [drivers section](../driver/).  
-   The CS2 ingame overlay requires a Valthrun driver to be successfully loaded.
+2. 设置 Valthrun 驱动  
+   如何设置 Valthrun 驱动的详细步骤请参考[驱动部分](../driver/)。  
+   CS2 游戏内覆盖需要成功加载一个 Valthrun 驱动程序。
 
-## Setup
+## 设置
 
-Once a Valthrun driver has been successfully loaded, and CS2 is up and running,
-you can start the Valthrun overlay by running `controller.exe`.
-If everything is set up correctly, you should see a terminal window looking like this:
-![Screenshot of Success](../../_media/screenshot_controller_success.png)
+一旦成功加载了 Valthrun 驱动，并且 CS2 已经启动运行，  
+您可以通过运行 `controller.exe` 启动 Valthrun 覆盖层。  
+如果一切设置正确，您应当会看到如下所示的终端窗口：  
+![成功截图](../../_media/screenshot_controller_success.png)
 
-With these steps completed, you are now ready to use Valthrun and take advantage of its gameplay enhancements for Counter-Strike 2.
-You can access the overlay by pressing the `PAUSE` key. If you do not have such key please refer to [Open the GUI without a PAUSE key](../../troubleshooting/overlay/pause_key)
+完成这些步骤后，您现在可以使用 Valthrun，并利用其对 Counter-Strike 2 的游戏增强功能。  
+您可以通过按下 `PAUSE` 键访问覆盖。如果您的键盘上没有此键，请参考[在没有 PAUSE 键的情况下打开 GUI](../../troubleshooting/overlay/pause_key)。
 
-## Usage along with Faceit
+## 与 Faceit 一起使用
 
-It is possible to use the Valthrun CS2 in-game overlay along with the Zenith driver for Faceit, but it is not recommended. Using the overlay while playing Counter Strike 2 on Faceit might result in your account being flagged due to potential violations of Faceit’s policies.
+可以使用 Valthrun CS2 游戏内覆盖配合 Zenith 驱动在 Faceit 上使用，但并不推荐。  
+在 Faceit 上玩 Counter Strike 2 时使用该覆盖层可能会导致您的帐户被标记，因为可能违反了 Faceit 的政策。
 
-A possible solution to retain all the functionalities of the overlay without actually overlaying the game might be developed in the future. This would allow users to benefit from the features without risking detection.
+未来可能会开发一种解决方案，以便在不实际覆盖游戏的情况下保留覆盖层的所有功能，从而允许用户在不冒被检测风险的情况下享受这些功能。
 
-## Showcase
+## 展示
 
 import Showcase from "@site/src/components/showcase";
 

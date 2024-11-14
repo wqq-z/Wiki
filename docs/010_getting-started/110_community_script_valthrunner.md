@@ -1,39 +1,39 @@
 ---
-title: CS2 Overlay all in one script (Community)
+title: CS2 覆盖层一键脚本（社区版）
 ---
 
-# All in one setup script by Valthrunner
+# Valthrunner 的一键设置脚本
 
 :::warning
-This script has been made by @Valthrunner and is not officially supported by Valthrun.  
-For assistance or troubleshooting regarding this script, visit `#support-run-script` on the official [Valthrun Discord](https://discord.gg/ecKbpAPW5T).
+此脚本由 @Valthrunner 制作，并非 Valthrun 官方支持的脚本。  
+如需关于该脚本的帮助或故障排除，请访问官方 [Valthrun Discord](https://discord.gg/ecKbpAPW5T) 的 `#support-run-script` 频道。
 :::
 
-## Features
+## 功能
 
-- :rocket: **Automatic Updates:** Fetches the latest necessary files seamlessly.
-- :sparkles: **Driver Mapping:** Maps the driver effortlessly.
-- ⚡ **Convenience:** Simplifies running Valthrun and CS2.
+- :rocket: **自动更新**：无缝获取最新所需文件。
+- :sparkles: **驱动映射**：轻松映射驱动。
+- ⚡ **便捷性**：简化 Valthrun 和 CS2 的运行过程。
 
-## Get Started :rocket:
+## 快速开始 :rocket:
 
-1. **Download the Script**: [Release](https://github.com/valthrunner/Valthrun/releases/latest/download/run.bat) (recommended) _or [Main branch](https://github.com/valthrunner/Valthrun/raw/main/run.bat)_.
+1. **下载脚本**：[发布版](https://github.com/valthrunner/Valthrun/releases/latest/download/run.bat)（推荐） _或 [主分支](https://github.com/valthrunner/Valthrun/raw/main/run.bat)_。
 
-2. **Run the Script**: Double-click the script (run.bat).
+2. **运行脚本**：双击脚本（run.bat）。
 
-3. **Adjust Video Settings**: Ensure CS2 is in fullscreen windowed or windowed mode for the overlay to display correctly.
+3. **调整视频设置**：确保 CS2 处于全屏窗口或窗口模式，以便正确显示覆盖层。
 
-4. **Configure Valthrun**: Press the PAUSE key and configure Valthrun (if you can't find it, check out: [Open the GUI without a PAUSE key](../troubleshooting/overlay/pause_key)).
+4. **配置 Valthrun**：按下 PAUSE 键并配置 Valthrun（如果找不到该键，请查看：[在没有 PAUSE 键的情况下打开 GUI](../troubleshooting/overlay/pause_key)）。
 
-5. **Show Some Love**: Add a Star to these repos: [Script](https://github.com/valthrunner/Valthrun) & [Valthrun](https://github.com/Valthrun/Valthrun)! :star2:
+5. **支持一下**：为这些仓库点个星标：[脚本](https://github.com/valthrunner/Valthrun) & [Valthrun](https://github.com/Valthrun/Valthrun)! :star2:
 
-6. **Enjoy** :tada:!
+6. **享受吧** :tada:!
 
-## Shareable Radar 📡
+## 可共享雷达 📡
 
-**Enjoy the built in Valthrun sharable web radar by running [run.bat 🎉](https://github.com/valthrunner/Valthrun/releases/latest/download/run.bat)!**
+**通过运行 [run.bat 🎉](https://github.com/valthrunner/Valthrun/releases/latest/download/run.bat) 使用内置的 Valthrun 可共享网页雷达！**
 
-## Script Support:
+## 脚本支持：
 
-For anything **regarding the Script**, visit `#support-run-script` on the official [Valthrun Discord](https://discord.gg/ecKbpAPW5T).
+对于**关于脚本的任何问题**，请访问官方 [Valthrun Discord](https://discord.gg/ecKbpAPW5T) 的 `#support-run-script` 频道。
 ![image](../_media/showcase_valthrunners_script.png)

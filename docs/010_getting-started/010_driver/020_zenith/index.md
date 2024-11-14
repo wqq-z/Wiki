@@ -1,25 +1,25 @@
 ---
-title: Zenith Driver
+title: Zenith 驱动
 ---
 
-# Valthrun Zenith Driver
+# Valthrun Zenith 驱动
 
 :::note
-The Valthrun Zenith Driver is under development and currently not publically available.  
-Join the [Valthrun Discord](/general/discord) and stay tuned for updates.
+Valthrun Zenith 驱动正在开发中，目前尚未公开发布。  
+加入 [Valthrun Discord](/general/discord) 并关注更新。
 :::
 
-The Valthrun Zenith Driver is designed to read from and write to arbitrary physical or virtual memory. This implementation is completely transparent to the Windows operating system, achieved by hijacking the Virtualization-Based Security (VBS) feature of Windows, bypassing typical OS-level detection mechanisms.
+Valthrun Zenith 驱动设计用于读取和写入任意物理或虚拟内存。该实现对 Windows 操作系统完全透明，通过劫持 Windows 的虚拟化基础安全 (VBS) 功能，从而绕过常规的操作系统级别检测机制。
 
-## Initial Zenith Driver Setup
+## 初始 Zenith 驱动设置
 
-To load the Valthrun Zenith Driver, users must create a bootable USB stick using the Valthrun Zenith UEFI loader. This USB stick is prepared with the Valthrun Zenith installer and serves as the boot medium to initiate the driver. Follow the steps below to create the boot medium:
+要加载 Valthrun Zenith 驱动，用户必须使用 Valthrun Zenith UEFI 加载器创建一个可引导的 USB 闪存盘。该 USB 闪存盘预装了 Valthrun Zenith 安装程序，作为引导介质来初始化驱动。请按照以下步骤创建引导介质：
 
 :::warning
-Documentation for this section is incomplete.  
-Please stay tuned for updates.
+此部分的文档尚未完成。  
+请关注后续更新。
 :::
 
-## Load Zenith on system startup / reboot
+## 系统启动/重启时加载 Zenith 驱动
 
-The Valthrun Zenith Driver is unloaded upon system shutdown. To reload it, boot the system via the Valthrun Zenith UEFI loader on startup. This can be done by either manually selecting the Valthrun Zenith EFI loader at each boot or adjusting the system’s boot order to prioritize the USB loader for automatic loading on each startup.
+Valthrun Zenith 驱动在系统关闭时会被卸载。要重新加载它，请在启动时通过 Valthrun Zenith UEFI 加载器引导系统。您可以在每次启动时手动选择 Valthrun Zenith EFI 加载器，或调整系统的启动顺序，使 USB 加载器具有优先级，从而在每次启动时自动加载 Zenith 驱动。

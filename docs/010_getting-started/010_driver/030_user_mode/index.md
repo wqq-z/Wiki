@@ -1,18 +1,18 @@
 ---
-title: Usermode Driver
+title: 用户模式驱动
 ---
 
-# Valthrun Usermode Driver
+# Valthrun 用户模式驱动
 
 :::danger
-This driver is for development purposes only.  
-Do not use this driver unless you know what you are doing.
+此驱动仅用于开发目的。  
+除非您清楚自己在做什么，否则请勿使用此驱动。
 :::
 
-The Valthrun Usermode Driver is a memory driver implementation that utilizes the `NtReadVirtualMemory` and `NtWriteVirtualMemory` functions to read from and write to the memory of other processes. This driver provides a straightforward approach for memory manipulation without the need for special setup or loading methods, making it more accessible than other drivers in the Valthrun Driver suite.
+Valthrun 用户模式驱动是一种内存驱动实现，利用 `NtReadVirtualMemory` 和 `NtWriteVirtualMemory` 函数来读取和写入其他进程的内存。与 Valthrun 驱动套件中的其他驱动相比，此驱动无需特殊设置或加载方法，提供了一种更为简便的内存操作方法。
 
-However, it is important to note that the Valthrun Usermode Driver should only be used for development purposes or with processes that are not protected, as it does not offer the same level of security or stealth as the Kernel or Zenith Driver. For further implementation details, you can refer to the code available here: [Valthrun Usermode Driver Implementation](https://github.com/Valthrun/Valthrun/blob/master/kernel/um-driver-impl).
+然而，需要注意的是，Valthrun 用户模式驱动仅适用于开发用途或未受保护的进程，因为它不具备内核驱动或 Zenith 驱动相同的安全性或隐蔽性。有关更多实现细节，请参阅代码：[Valthrun 用户模式驱动实现](https://github.com/Valthrun/Valthrun/blob/master/kernel/um-driver-impl)。
 
-## Setting up the Usermode Driver
+## 设置用户模式驱动
 
-As the sole purpose of the Valthrun Usermode Driver is for development purposes, it is not distributed. Users are encouraged to compile the driver themselves and refer to the source code for further implementation details, which can be found [here](https://github.com/Valthrun/Valthrun/blob/master/kernel/um-driver-impl).
+由于 Valthrun 用户模式驱动的唯一用途是开发，因此并不进行分发。建议用户自行编译驱动并参考源码以获取进一步的实现细节，源码可以在[这里](https://github.com/Valthrun/Valthrun/blob/master/kernel/um-driver-impl)找到。

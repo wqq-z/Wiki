@@ -1,17 +1,19 @@
 ---
-title: Applications blocking drivers
+title: 阻止驱动的应用程序
 ---
 
-# General applications which might interfer with the kernel module
-As manually mapping the kernel driver is something that is prohibited by many applications, including some unsuspecting ones, it's important to be aware of potential interference. Here is a list of commonly used applications that might interfere and should be closed or stopped before mapping the driver:
-- Common games with anti-cheats
-  - CS:GO / CS2 with Facit or ESEA
-  - EAC (Apex, Fortnite, Rust)
-  - Vanguard (Valorant)
-- Anti virus applications  
+# 可能干扰内核模块的常见应用程序
+
+由于手动映射内核驱动程序会受到许多应用程序的限制（包括一些看似无关的应用程序），了解潜在的干扰情况非常重要。以下是一些可能干扰驱动映射的常用应用程序列表，在映射驱动之前应关闭或停止这些程序：
+
+- 常见带有反作弊的游戏
+  - 带有 Facit 或 ESEA 的 CS:GO / CS2
+  - EAC（Apex、Fortnite、Rust）
+  - Vanguard（Valorant）
+- 防病毒应用程序
 - Windows Defender
 
 :::warning
-Please do *not* permanently disable your AV.  
-Only do it for the time of mapping the driver!
+请*不要*永久禁用您的防病毒软件。  
+仅在映射驱动时临时禁用！
 :::

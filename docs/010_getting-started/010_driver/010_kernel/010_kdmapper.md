@@ -1,44 +1,48 @@
 ---
 title: KDMapper
 ---
-# Use KDMapper to load the Valthrun Kernel Driver
-## What is KDMapper
-[KDMapper](https://github.com/TheCruZ/kdmapper) is the recommended method for manually loading the Valthrun Kernel Driver into memory.  
-This simple tool exploits the `iqvw64e.sys` Intel driver to map non-signed drivers, allowing you to load any driver, including the Valthrun Kernel Driver.  
 
-## Map the Valthrun Kernel Driver
-To map the Valthrun Kernel Driver with KDMapper, follow these steps:
+# 使用 KDMapper 加载 Valthrun 内核驱动
 
-1. **Obtain KDMapper**  
-   Before you can use KDMapper, you need a working executable of KDMapper.  
-   The official KDMapper repository does not provide a download link, so you have two options:
-   - **Compile It Yourself (Recommended)**  
-   For enhanced security and trustworthiness, it is recommended to compile KDMapper yourself.  
-   You can find detailed instructions on how to compile KDMapper in the official [KDMapper repository](https://github.com/TheCruZ/kdmapper).  
-   Compiling it yourself ensures that you have control over the source code and can verify its integrity.  
-   
-   - **Download a Precompiled Version**  
-   You can also find a precompiled version of KDMapper [here](https://github.com/valthrunner/Valthrun/releases/latest).  
-   Please note that this precompiled version is **not offered by Valtrun** but is compiled and uploaded by the user @valthrunner.  
-   When downloading precompiled software, exercise caution and ensure that you trust the source.
+## 什么是 KDMapper
 
-2. **Open a Command Line as Administrator**  
-   To use KDMapper successfully, open a command line with administrator privileges.  
-   You can do this by right-clicking on the Command Prompt or PowerShell and selecting "Run as administrator.".  
+[KDMapper](https://github.com/TheCruZ/kdmapper) 是推荐用于手动加载 Valthrun 内核驱动到内存中的工具。  
+这个简单的工具利用了 `iqvw64e.sys` 英特尔驱动程序来映射未签名的驱动程序，使您能够加载包括 Valthrun 内核驱动在内的任何驱动程序。
 
-3. **Navigate to the Valthrun directory**  
-   Before proceeding with the Valthrun Kernel Driver loading process using KDMapper, make sure you are in the correct directory where kdmapper.exe and valthrun-driver.sys are located.  
-   Use the cd command to navigate to the directory where these files are located, ensuring that KDMapper can access the required components for the driver loading procedure.
+## 映射 Valthrun 内核驱动
 
-4. **Load `valthrun-driver.sys` with KDMapper**  
-   To load the Valthrun Kernel Driver into memory, execute the following command in your command prompt or PowerShell:  
-   ```bash
+按照以下步骤使用 KDMapper 映射 Valthrun 内核驱动：
+
+1. **获取 KDMapper**  
+   在使用 KDMapper 之前，您需要一个可用的 KDMapper 可执行文件。  
+   官方的 KDMapper 仓库不提供下载链接，因此您有两种选择：
+
+   - **自行编译（推荐）**  
+     为了更高的安全性和可信度，建议您自行编译 KDMapper。  
+     在官方 [KDMapper 仓库](https://github.com/TheCruZ/kdmapper) 中可以找到详细的编译说明。  
+     自行编译可以确保您对源代码的控制，并可以验证其完整性。
+
+   - **下载预编译版本**  
+     您也可以在[此处](https://github.com/valthrunner/Valthrun/releases/latest)找到 KDMapper 的预编译版本。  
+     请注意，此预编译版本**并非由 Valtrun 提供**，而是由用户 @valthrunner 编译并上传的。  
+     下载预编译软件时，请保持谨慎并确保您信任该来源。
+
+2. **以管理员身份打开命令行**  
+   为了成功使用 KDMapper，请以管理员权限打开命令行。  
+   您可以右键点击命令提示符或 PowerShell 并选择 "以管理员身份运行"。
+
+3. **导航到 Valthrun 目录**  
+   在使用 KDMapper 加载 Valthrun 内核驱动之前，请确保您位于正确的目录中，即包含 kdmapper.exe 和 valthrun-driver.sys 的目录。  
+   使用 `cd` 命令导航到该目录，以确保 KDMapper 能够访问加载驱动程序所需的组件。
+
+4. **使用 KDMapper 加载 `valthrun-driver.sys`**  
+   要将 Valthrun 内核驱动加载到内存中，请在命令提示符或 PowerShell 中执行以下命令：
+   bash
    kdmapper.exe valthrun-driver.sys
-   ```
-  
-If everything has been done successfully, the output should resemble the following:  
-```
-[<] Loading vulnerable driver, Name: SaBVbLkOxDxwTNNOsSPnmMW
+
+如果一切操作正确，输出应类似如下内容：
+
+```[<] Loading vulnerable driver, Name: SaBVbLkOxDxwTNNOsSPnmMW
 [+] NtLoadDriver Status 0x0
 [-] Can't find pattern
 [+] PiDDBLock found with second pattern
@@ -61,20 +65,21 @@ If everything has been done successfully, the output should resemble the followi
 [+] Vul driver data destroyed before unlink
 [+] success
 ```
+
+确保输出中包含 `[+] DriverEntry returned 0x0` 这一行。  
+如果出现该行，则表示 Valthrun 内核驱动加载成功。  
+然而，如果**输出中未包含此行**，则表示**映射过程失败**。  
+在这种情况下，请参阅故障排除部分，以获取解决问题的指南。
+
+## 故障排除
+
+有关如何解决常见 KDMapper 错误的信息，请参阅[此处](../../../troubleshooting/kernel/driver_mapper_errors)。
+
+## 优点 / 缺点
+
+<h2>优点</h2>
+使用 KDMapper 是一个相对简单的过程。  
+KDMapper 相当可靠，并且不需要反复试验。  
   
-
-Ensure that the output contains the line: `[+] DriverEntry returned 0x0`.   
-If this line is present, it indicates a successful loading of the Valthrun Kernel Driver.   
-However, if this line is **not found in the output**, it suggests that the **mapping process failed**.   
-In such cases, please refer to the troubleshooting section for guidance on resolving the issue.
-
-## Troubleshooting
-Informations on how to troubleshoot common KDMapper errors can be found [here](../../../troubleshooting/kernel/driver_mapper_errors)
-
-## Advantages / Disadvantages
-<h2>Advantages</h2>
-Using KDMapper is a quite straigt forward process.  
-KDMapper is quite reliable and does not require a lot of trail and error.  
-  
-<h2>Disadvantages</h2>
-There are two main disadvantages to KDMapper.  
+<h2>缺点</h2>
+使用 KDMapper 有两个主要缺点。

@@ -1,41 +1,41 @@
 ---
-title: Architectural overview
+title: 架构概览
 ---
 
-# Valthrun's architecture
+# Valthrun 的架构
 
-Valthrun is a suite of tools developed to enhance gaming experiences by providing applications that offer additional game insights and functionalities. These tools range in purpose, such as displaying in-game overlays or broadcasting radar information independently. Each Valthrun application relies on the ability to access another application's memory, enabling the extraction and display of game-related data.
+Valthrun 是一套旨在通过提供额外的游戏洞察和功能来提升游戏体验的工具。这些工具的用途各不相同，例如显示游戏内覆盖层或独立广播雷达信息。每个 Valthrun 应用程序都依赖于访问其他应用程序内存的能力，从而能够提取和显示与游戏相关的数据。
 
-The Valthrun system achieves this memory access through its drivers, which are designed to operate silently within or alongside the Windows environment. Some drivers are mapped into the Windows kernel (e.g. the [Kernel driver](./driver/kernel)), while others load even before Windows starts to work along with Hyper-V’s Virtual Machine Monitor (VMM), effectively shilding itself from the operating system (e.g. the [Zenith driver](./driver/zenith)).
+Valthrun 系统通过其驱动程序实现这种内存访问，这些驱动程序设计为在 Windows 环境中或与之并行悄然运行。一些驱动程序被映射到 Windows 内核中（例如 [内核驱动](./driver/kernel)），而另一些则在 Windows 启动之前加载，并与 Hyper-V 的虚拟机监控程序 (VMM) 一起工作，有效地将自身屏蔽在操作系统之外（例如 [Zenith 驱动](./driver/zenith)）。
 
-To enable communication between Valthrun’s user-mode applications and the drivers, each driver is packaged with a user-mode driver interface in the form of a dynamic-link library (DLL). This interface standardizes access across all Valthrun applications, ensuring compatibility and ease of use.
+为了在 Valthrun 的用户模式应用程序和驱动程序之间建立通信，每个驱动程序都配有一个以动态链接库 (DLL) 形式的用户模式驱动接口。该接口标准化了所有 Valthrun 应用的访问方式，确保兼容性和易用性。
 
-This means, in order to use any Valthrun application you require three core components:
+因此，要使用任何 Valthrun 应用程序，您需要以下三个核心组件：
 
-- the application
-- the driver
-- and the driver interface.
+- 应用程序
+- 驱动程序
+- 驱动接口
 
-A more detailed description of each component can be found in the next sections.
+在接下来的部分中，可以找到每个组件的更详细描述。
 
-## Valthrun User Mode Applications
+## Valthrun 用户模式应用程序
 
-Valthrun's user-mode applications are specialized tools that provide game-specific features. These applications use the drivers’ memory access capabilities to gather and display information in real time.  
-Example of such applications are:
+Valthrun 的用户模式应用程序是提供特定游戏功能的专业工具。这些应用程序利用驱动程序的内存访问能力，实时收集和显示信息。  
+此类应用程序的示例包括：
 
-- the Counter Strike 2 Controller, displaying an overlay with in-game statistics, offering players enhanced situational awareness
+- Counter Strike 2 控制器，显示带有游戏内统计数据的覆盖层，为玩家提供增强的态势感知
 
-- the standalone radar client, that broadcasts radar data to external viewers
+- 独立雷达客户端，将雷达数据广播给外部观众
 
-Detailed information on each application is available in the [Applications Section](./applications).
+有关每个应用程序的详细信息，请参阅[应用程序部分](./applications)。
 
-## Valthrun Driver
+## Valthrun 驱动程序
 
-The Valthrun driver is a crucial component that enables user-mode applications to read the memory of other processes. Valthrun provides a range of driver implementations, each tailored to specific scenarios and requirements. These drivers are designed to accommodate varying levels stealthiness.
+Valthrun 驱动程序是关键组件，使用户模式应用程序能够读取其他进程的内存。Valthrun 提供了一系列驱动实现，每种驱动针对特定的场景和需求而定制。这些驱动设计成适应不同级别的隐蔽性需求。
 
-An overview of available drivers can be found in the [Drivers Section](./driver).
+可用驱动程序的概览可以在[驱动部分](./driver)中找到。
 
-## Valthrun Driver Interface
+## Valthrun 驱动接口
 
-The Valthrun Driver Interface is a dynamic-link library (DLL) that serves as the primary connection between the application and the driver. It abstracts the details of each driver’s implementation, offering a unified API for user-mode applications.  
-Typically, the Driver Interface DLL is distributed together with the Valthrun Driver, as it is closely integrated with the driver’s functionality.
+Valthrun 驱动接口是一个动态链接库 (DLL)，它充当应用程序与驱动程序之间的主要连接。它抽象了每个驱动程序的实现细节，为用户模式应用程序提供统一的 API。  
+通常，驱动接口 DLL 与 Valthrun 驱动程序一起分发，因为它与驱动程序的功能密切集成。

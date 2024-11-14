@@ -1,13 +1,15 @@
-# Run the mapper as administrator
-One of the most common mistakes is to try to map the kernel driver without administrator priviledges.  
-Most standard manual mappers require administrator priviledges in order to work.  
-  
-In order to run these applications as administrator, the terminal itself must be started as administrator.  
+# 以管理员身份运行映射器
 
-## How to start PowerShell as administrator
-1. Search for PowerShell within the Windows search bar
-2. Right click and select "Run as administrator"
-3. Select "Yes" for the User Account Controll popup
+一个常见的错误是尝试在没有管理员权限的情况下映射内核驱动程序。  
+大多数标准手动映射器需要管理员权限才能正常运行。
 
-When done correctly, a PowerShell window should open.  
-One of the key difference is, that the default selected path should be `C:\Windows\system32` as well as an `Administrator: ` in the window title.
+要以管理员身份运行这些应用程序，终端本身必须以管理员身份启动。
+
+## 如何以管理员身份启动 PowerShell
+
+1. 在 Windows 搜索栏中搜索 PowerShell
+2. 右键点击并选择“以管理员身份运行”
+3. 在用户账户控制弹窗中选择“是”
+
+如果操作正确，会打开一个 PowerShell 窗口。  
+一个关键的区别是，默认选定的路径应为 `C:\Windows\system32`，且窗口标题中会显示“管理员: ”。

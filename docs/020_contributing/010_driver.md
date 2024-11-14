@@ -1,15 +1,16 @@
 ---
-title: Kernel Driver
+title: 内核驱动
 ---
 
-# Contributing to the Valthrun kernel Driver
+# 为 Valthrun 内核驱动做出贡献
 
 :::note
-This page is outdated.  
-The Valthrun kernel driver is available here:  
+此页面已过期。  
+Valthrun 内核驱动现已公开，可以在此处访问：  
 https://github.com/Valthrun/Valthrun-kernel-driver
 :::
-Currently the kernel driver is private.  
-Use the prebuild kernel driver available within the github releases.
 
-The base for the kernel driver started open source and is still available within the commit history. As I've added more and more in depth features as manual mapping support and basic stelth features I decided to make its code base private. One of many reasons is that I may use this driver for other game- / reverse engineering- based projects.
+目前内核驱动仍为私有。  
+请使用 GitHub 发布中的预构建内核驱动。
+
+内核驱动最初是开源的，其基础代码仍可以在提交历史中找到。随着我逐渐添加更多深入的功能，例如手动映射支持和基本的隐蔽功能，我决定将其代码库设为私有。原因之一是我可能会将该驱动用于其他基于游戏或逆向工程的项目。

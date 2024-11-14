@@ -1,30 +1,30 @@
 ---
-title: Kernel Driver
+title: 内核驱动
 ---
 
-# Valthrun Kernel Driver
+# Valthrun 内核驱动
 
-The Valthrun Kernel Driver is the original version of the Valthrun memory driver, designed to operate within the Windows kernel’s memory space, enabling direct memory read and write operations at the kernel level without bypassing user-mode detection mechanisms. This driver supports multiple loading methods, including standard driver loading, manual mapping, and loading via the Valthrun UEFI Loader.
+Valthrun 内核驱动是 Valthrun 内存驱动的原始版本，设计用于在 Windows 内核的内存空间中操作，允许在内核级别直接进行内存读写操作，而无需绕过用户模式的检测机制。此驱动支持多种加载方法，包括标准驱动加载、手动映射，以及通过 Valthrun UEFI 加载器进行加载。
 
-## Loading the Valthrun Kernel Driver
+## 加载 Valthrun 内核驱动
 
-Loading or mapping a driver, like the Valthrun Kernel Driver, is a complex process often hindered by strict security requirements. Typically, drivers are signed using an Extended Validation (EV) Code Signing Certificate. However, obtaining these certificates is challenging, and they are susceptible to blocking by third-party software, such as Valve Anti-Cheat (VAC). Due to these limitations, loading the Valthrun Kernel Driver requires unconventional methods. An overview and detailed descriptions of these methods are available in the [next section](#methods).
+加载或映射驱动（例如 Valthrun 内核驱动）是一个复杂的过程，通常受到严格的安全要求的限制。通常情况下，驱动需要使用扩展验证 (EV) 代码签名证书来签名。然而，获取这些证书具有挑战性，并且它们可能被第三方软件（如 Valve 反作弊系统 (VAC)）阻止。由于这些限制，加载 Valthrun 内核驱动需要采用非传统方法。有关这些方法的概述和详细说明，请参阅[下一节](#methods)。
 
-## Methods to load the Valthrun Kernel Driver {#methods}
+## 加载 Valthrun 内核驱动的方法 {#methods}
 
-Here is a quick overview of various methods for loading the Valthrun Kernel Driver:
+以下是加载 Valthrun 内核驱动的各种方法的快速概览：
 
-| Method                                       | Complexity | Success Rate |
-| -------------------------------------------- | ---------- | ------------ |
-| [Valthrun EFI loader](./efi-bootloader)      | Medium     | High         |
-| [Manual Mapping via KD-Mapper](./kdmapper)   | Medium     | Medium       |
-| [Manual Mapping via KDU](:/kdu)\*            | Medium     | Medium       |
-| [Using Windows Test-Signing](./test-signing) | Low        | Very High    |
+| 方法                                    | 复杂性 | 成功率 |
+| --------------------------------------- | ------ | ------ |
+| [Valthrun EFI 加载器](./efi-bootloader) | 中等   | 高     |
+| [通过 KD-Mapper 手动映射](./kdmapper)   | 中等   | 中等   |
+| [通过 KDU 手动映射](./kdu)\*            | 中等   | 中等   |
+| [使用 Windows 测试签名](./test-signing) | 低     | 非常高 |
 
-\* The wiki entry for this method has not yet been completed
+\* 此方法的 Wiki 条目尚未完成
 
-Each method for loading the Valthrun Kernel Driver varies in complexity and success rate, and the optimal choice depends on specific requirements and system compatibility. Some methods may be more stable on certain configurations, while others offer increased reliability under restrictive conditions. For a deeper understanding and step-by-step guidance, consult the linked resources on each mapping method.
+每种加载 Valthrun 内核驱动的方法在复杂性和成功率方面有所不同，最佳选择取决于具体需求和系统兼容性。一些方法在特定配置上可能更稳定，而另一些方法在受限条件下提供更高的可靠性。有关更深入的理解和逐步指南，请参考每种映射方法的链接资源。
 
-## Supported Windows Versions
+## 支持的 Windows 版本
 
-The Valthrun Kernel Driver is designed for compatibility across a broad spectrum of Windows versions, with support for recent versions ensured by dynamically resolving function calls and structure offsets. Testing confirms stability on the latest Windows 10 and Windows 11 versions, including 22H2, and user feedback suggests functionality on versions as far back as 20H2. Should you experience any issues, please submit an issue report with your Windows version and error description on the official [GitHub repository](https://github.com/Valthrun/valthrun).
+Valthrun 内核驱动旨在兼容广泛的 Windows 版本，并通过动态解析函数调用和结构偏移量来确保对最新版本的支持。测试表明该驱动在最新的 Windows 10 和 Windows 11 版本（包括 22H2）上表现稳定，用户反馈表明在早至 20H2 的版本上也能正常工作。如遇到任何问题，请在官方 [GitHub 仓库](https://github.com/Valthrun/valthrun)上提交问题报告，并附上您的 Windows 版本和错误描述。

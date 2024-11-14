@@ -1,22 +1,22 @@
 ---
-title: Valthrun Applications
+title: Valthrun 应用
 ---
 
-# Valthrun Applications
+# Valthrun 应用
 
-Valthrun currently only supports user mode applications for the Counter Strike 2 game.  
-An overview of available applications can be found bellow.
+Valthrun 目前仅支持用于 Counter Strike 2 游戏的用户模式应用。  
+以下是可用应用程序的概览。
 
 ## Counter Strike 2
 
-Valthrun provides two distinct applications designed to enhance the experience of playing Counter Strike 2.
+Valthrun 提供了两个不同的应用程序，旨在增强 Counter Strike 2 的游戏体验。
 
-### Valthrun CS2 Overlay
+### Valthrun CS2 覆盖层
 
-An extensive overlay that displays additional game information over the running game.  
-More information can be found [here](./cs2_overlay).
+一个扩展的覆盖层，可在运行的游戏上显示额外的游戏信息。  
+更多信息请参见[此处](./cs2_overlay)。
 
-### Valthrun CS2 Web Radar
+### Valthrun CS2 网页雷达
 
-A standalone web radar that allows you to stream player locations and other game information to any platform.  
-More information can be found [here](./cs2_radar_standalone).
+一个独立的网页雷达，允许您将玩家位置和其他游戏信息流式传输到任何平台。  
+更多信息请参见[此处](./cs2_radar_standalone)。

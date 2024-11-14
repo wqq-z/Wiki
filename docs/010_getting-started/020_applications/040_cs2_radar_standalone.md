@@ -1,42 +1,43 @@
 ---
-title: CS2 Standalone Radar
+title: CS2 独立雷达
 ---
 
-# Standalone web radar
+# 独立网页雷达
 
-The standalone web radar provides the full web radar experience, without the in game overlay.
+独立网页雷达提供完整的网页雷达体验，无需游戏内覆盖。
 
-## Prerequiresits
+## 前置要求
 
-Before you can start the standalone web radar you have to optain the following prerequiresits:
+在开始使用独立网页雷达之前，您需要获取以下前置条件：
 
-1. Download the standalone web radar client  
-   Download the latest radar client from GitHub:
+1. 下载独立网页雷达客户端  
+   从 GitHub 下载最新的雷达客户端：  
    https://github.com/Valthrun/Valthrun/releases/tag/latest
 
-2. Setup one of the Valthrun drivers  
-   How you can setup a Valthrun driver is described in detail in the [drivers section](../driver/).  
-   The CS2 ingame overlay requires a Valthrun driver to be successfully loaded.
+2. 设置 Valthrun 驱动  
+   如何设置 Valthrun 驱动的详细步骤请参考[驱动部分](../driver/)。  
+   CS2 游戏内覆盖需要成功加载一个 Valthrun 驱动程序。
 
-## Starting the web radar
+## 启动网页雷达
 
-Starting the web radar is simple.  
-Just execute the `radar_client.exe` executable.  
-If the radar has successfully been loaded you should see the following messages:
+启动网页雷达非常简单。  
+只需执行 `radar_client.exe` 可执行文件即可。  
+如果雷达已成功加载，您应该会看到以下消息：  
 ![image](../../_media/screenshot_standalone_web_radar_started.png)
 
-You can use the link to show the radar on another device or even share a radar with your team mates.
+您可以使用链接在其他设备上显示雷达，甚至可以与队友共享雷达。
 
 :::note
-To view all possible CLI arguments run:
+要查看所有可能的命令行参数，请运行：
 
-```ps1
+ps1
 radar_client.exe -h
-```
 
+```
 :::
 
-## Usage along with Faceit
+## 与 Faceit 一起使用
 
-The CS2 standalone web radar, when used in combination with the Zenith driver, can be used alongside Faceit.
-The web radar operates independently without the risk of being flagged for because of the use overlays.
+CS2 独立网页雷达在与 Zenith 驱动组合使用时，可以在 Faceit 上一起使用。
+网页雷达独立运行，不会因为使用覆盖而有被标记的风险。
+```

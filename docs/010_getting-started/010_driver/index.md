@@ -1,10 +1,10 @@
 ---
-title: Valthrun Drivers
+title: Valthrun 驱动
 ---
 
-# Valthrun Drivers
+# Valthrun 驱动
 
-In order for user-mode applications, such as the [Valthrun CS2 overlay](../applications/cs2_overlay) or the [Valthrun CS2 Web Radar](../applications/cs2_radar_standalone), to access the memory of other processes, a driver is required. The Valthrun suite provides multiple implementations of such drivers, tailored to different circumstances and requirements of the target processes. Each implementation is designed to handle specific scenarios, ensuring optimal performance and compatibility based on the security and protection measures in place for the processes you wish to attach to.
+为了使用户模式应用（例如 [Valthrun CS2 覆盖层](../applications/cs2_overlay) 或 [Valthrun CS2 Web 雷达](../applications/cs2_radar_standalone)）能够访问其他进程的内存，系统需要一个驱动程序。Valthrun 套件提供了多种此类驱动实现，适应目标进程的不同情况和需求。每种实现都设计用于处理特定场景，以确保根据目标进程的安全性和保护措施实现最佳性能和兼容性。
 
-Even though Valthrun offers a variety of drivers, you only need to load one of the drivers.  
-Currently, the most convenient option is to use the [Valthrun Kernel Driver](./kernel/).
+虽然 Valthrun 提供了多种驱动程序，但您只需加载其中一个即可。  
+目前最便捷的选择是使用 [Valthrun 内核驱动](./kernel/)。
